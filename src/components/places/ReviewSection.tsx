@@ -147,14 +147,14 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({
                       />
                     ) : (
                       <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-medium">
-                        {review.user.first_name.charAt(0).toUpperCase() || review.user.username}
+                        {review.user.username.charAt(0).toUpperCase()}
                       </div>
                     )}
 
                     {/* User Info */}
                     <div>
                       <div className="font-medium text-blue-600 hover:text-blue-800">
-                        {review.user.first_name} {review.user.last_name}
+                        {review.user.first_name} {review.user.last_name} || {review.user.username}
                       </div>
                       <div className="text-sm text-gray-500">
                         {formatDate(review.created_at)}
