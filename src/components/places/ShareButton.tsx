@@ -18,7 +18,7 @@ export const ShareButton: React.FC<ShareButtonProps> = ({ place }) => {
   };
 
   const shareUrl = encodeURIComponent(window.location.href);
-  const shareText = encodeURIComponent(`Check out ${place.name} on Astana Tourism!`);
+  const shareText = encodeURIComponent(`Check out ${place.name} on KazTourism!`);
 
   return (
     <div className="relative">

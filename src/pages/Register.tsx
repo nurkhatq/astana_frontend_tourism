@@ -57,7 +57,7 @@ export const RegisterPage = () => {
       <Card className="p-6">
         <div className="text-center mb-6">
           <h1 className="text-2xl font-bold text-gray-900">Create Account</h1>
-          <p className="text-gray-600 mt-2">Join Astana Tourism today</p>
+          <p className="text-gray-600 mt-2">Join KazTourism today</p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">

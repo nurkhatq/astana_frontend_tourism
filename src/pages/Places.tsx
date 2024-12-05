@@ -21,7 +21,7 @@ const categories = [
 
 
 export const PlacesPage = () => {
-  usePageTitle('Places - Astana Tourism');
+  usePageTitle('Places - KazTourism');
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
