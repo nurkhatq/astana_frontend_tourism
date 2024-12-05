@@ -30,7 +30,7 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     }
     
     try {
-      const { data } = await apiClient.get('/users/profile/favorites/');
+      const { data } = await apiClient.get('/users/favorites/');
       console.log('Fetched favorites:', data); // Debug log
       if (data.results) {
         setFavorites(data.results);
@@ -47,7 +47,7 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
   const toggleFavorite = async (place: Place) => {
     try {
-      const response = await apiClient.post('/users/profile/toggle-favorite/', { 
+      const response = await apiClient.post('/users/toggle-favorite/', { 
         place_id: place.id 
       });
       console.log('Toggle response:', response.data); // Debug log
