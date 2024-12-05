@@ -153,9 +153,13 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({
 
                     {/* User Info */}
                     <div>
-                      <div className="font-medium text-blue-600 hover:text-blue-800">
-                        {review.user.first_name} {review.user.last_name} || {review.user.username}
-                      </div>
+                    <div className="font-medium text-blue-600 hover:text-blue-800">
+                      {(review.user.first_name || review.user.last_name) ? (
+                        `${review.user.first_name || ''} ${review.user.last_name || ''}`.trim()
+                      ) : (
+                        review.user.username
+                      )}
+                    </div>
                       <div className="text-sm text-gray-500">
                         {formatDate(review.created_at)}
                       </div>
