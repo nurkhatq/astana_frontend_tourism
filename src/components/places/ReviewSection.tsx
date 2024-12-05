@@ -147,7 +147,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({
                       />
                     ) : (
                       <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-medium">
-                        {review.user.first_name.charAt(0).toUpperCase()}
+                        {review.user.first_name.charAt(0).toUpperCase() || review.user.username}
                       </div>
                     )}
 
